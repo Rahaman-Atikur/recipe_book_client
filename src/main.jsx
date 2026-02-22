@@ -1,12 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import { RouterContextProvider } from 'react-router'
-import { router } from './router/route.js'
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterContextProvider router={router}>
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
+import Home from "./pages/Home";
+import Addrecipe from "./pages/Addrecipe";
 
-    </RouterContextProvider>
-  </StrictMode>
-)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home></Home>,
+  },
+  {
+    path:"addrecipe",
+    element:<Addrecipe></Addrecipe>
+
+  }
+]);
+
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <RouterProvider router={router} />,
+);
