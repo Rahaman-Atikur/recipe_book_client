@@ -3,7 +3,7 @@ import React from 'react';
 const Addrecipe = () => {
     return (
         <div>
-            <h1>This page is addrecipe</h1>
+            <h1 className='font-extrabold'>This page is addrecipe</h1>
         </div>
     );
 };
