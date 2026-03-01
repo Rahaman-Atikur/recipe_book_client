@@ -1,7 +1,12 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 const Addrecipe = () => {
-     return (
+
+
+  return (
+    <>
+    <Navbar></Navbar>
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-6 relative"
       style={{
@@ -18,14 +23,14 @@ const Addrecipe = () => {
           Add Your Recipe
         </h1>
 
-        <form  className="space-y-6">
+        <form className="space-y-6">
           {/* Image URL */}
           <div>
             <label className="font-semibold text-lg">Image URL</label>
             <input
               type="text"
               name="image"
-             
+
               placeholder="Enter image URL"
               className="input input-bordered w-full h-14 text-lg"
               required
@@ -38,7 +43,7 @@ const Addrecipe = () => {
             <input
               type="text"
               name="title"
-             
+
               placeholder="Enter recipe title"
               className="input input-bordered w-full h-14 text-lg"
               required
@@ -50,7 +55,7 @@ const Addrecipe = () => {
             <label className="font-semibold text-lg">Ingredients</label>
             <textarea
               name="ingredients"
-             
+
               placeholder="Write ingredients..."
               className="textarea textarea-bordered w-full h-32 text-lg"
               required
@@ -62,7 +67,7 @@ const Addrecipe = () => {
             <label className="font-semibold text-lg">Instructions</label>
             <textarea
               name="instructions"
-             
+
               placeholder="Write cooking instructions..."
               className="textarea textarea-bordered w-full h-40 text-lg"
               required
@@ -75,7 +80,7 @@ const Addrecipe = () => {
               <label className="font-semibold text-lg">Cuisine Type</label>
               <select
                 name="cuisine"
-               
+
                 className="select select-bordered w-full h-14 text-lg"
                 required
               >
@@ -95,7 +100,7 @@ const Addrecipe = () => {
               <input
                 type="number"
                 name="prepTime"
-               
+
                 placeholder="Enter time in minutes"
                 className="input input-bordered w-full h-14 text-lg"
                 required
@@ -117,7 +122,7 @@ const Addrecipe = () => {
                   >
                     <input
                       type="checkbox"
-                      
+
                       className="checkbox checkbox-primary"
                     />
                     {category}
@@ -131,7 +136,7 @@ const Addrecipe = () => {
           <div>
             <label className="font-semibold text-lg">Like Count</label>
             <input
-             
+
               readOnly
               className="input input-bordered w-full h-14 text-lg bg-gray-200"
             />
@@ -148,7 +153,9 @@ const Addrecipe = () => {
           </div>
         </form>
       </div>
-    </div>
+    </div></>
+
+    
   );
 };
 
