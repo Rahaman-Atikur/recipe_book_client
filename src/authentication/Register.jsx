@@ -9,10 +9,14 @@ const Register = () => {
         e.preventDefault();
 
         const form = e.target;
+        const formData = new FormData(form);
+        const userData = Object.fromEntries(formData.entries());
+        const email = userData.email;
+        const password = userData.password;
+        console.log(email, password);
 
         //     const name = form.name.value;
-        const email = form.email.value;
-        const password = form.password.value;
+
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
