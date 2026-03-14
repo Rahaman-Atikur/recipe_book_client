@@ -15,14 +15,13 @@ const Register = () => {
         const password = userData.password;
         console.log(email, password);
 
-        //     const name = form.name.value;
+       
 
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             console.log("User registered:", userCredential.user);
             alert("successfully registered");
-
         }
         catch (error) {
             console.error("Error registering user:", error);
