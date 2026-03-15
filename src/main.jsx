@@ -13,8 +13,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Navbar></Navbar>,
-    children:[
-      {path:"home", element: <Home></Home>}
+    children: [
+      {
+        path: "home",
+        loader: async () => {
+          const response = await fetch("http://localhost:5000/allRecipes");
+          if (!response.ok) throw new Error("Failed to load data");
+          return response.json();
+        },
+        element: <Home></Home>
+      }
     ]
   },
 

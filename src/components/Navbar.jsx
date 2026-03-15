@@ -49,6 +49,15 @@ const Navbar = () => {
           >
             Add Recipe
           </NavLink>
+
+           <NavLink
+            to="home"
+            className={({ isActive }) =>
+              `${linkClass} ${isActive ? activeClass : normalClass}`
+            }
+          >
+            Home
+          </NavLink>
         </div>
       </div>
     </nav>
