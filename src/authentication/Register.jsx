@@ -13,18 +13,18 @@ const Register = () => {
         const userData = Object.fromEntries(formData.entries());
         const email = userData.email;
         const password = userData.password;
-        console.log(email, password);
+        // console.log(email, password);
 
        
 
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            console.log("User registered:", userCredential.user);
+            // console.log("User registered:", userCredential.user);
             alert("successfully registered");
         }
         catch (error) {
-            console.error("Error registering user:", error);
+            // console.error("Error registering user:", error);
             alert("Failed to register user");
         }
     };

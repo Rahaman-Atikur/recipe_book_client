@@ -13,14 +13,14 @@ const Addrecipe = () => {
     // Manual fix for multiple checkboxes if needed:
     userData.categories = formData.getAll('categories');
 
-    fetch("http://localhost:5000/addRecipe", {
+    fetch("https://recipe-book-server-pp1ex6eip-atikur-rahamans-projects-7616adbe.vercel.app/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
         form.reset();
       })
       .catch(error => console.error('Error:', error));

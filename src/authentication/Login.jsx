@@ -10,7 +10,7 @@ const Login = () => {
     const form = e.target;
     const formData = new FormData(form);
     const userData = Object.fromEntries(formData.entries());
-    console.log(userData);
+    // console.log(userData);
 
     
   };

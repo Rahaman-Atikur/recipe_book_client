@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { NavLink, Outlet } from "react-router";
 // import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -51,16 +51,20 @@ const Navbar = () => {
           </NavLink>
 
            <NavLink
-            to="home"
+            to="/home"
             className={({ isActive }) =>
               `${linkClass} ${isActive ? activeClass : normalClass}`
             }
           >
             Home
           </NavLink>
+
+          
         </div>
       </div>
+       <Outlet></Outlet>
     </nav>
+   
   );
 };
 
