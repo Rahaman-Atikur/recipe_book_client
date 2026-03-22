@@ -17,7 +17,8 @@ const router = createBrowserRouter([
       {
         path: "home",
         loader: async () => {
-          const response = await fetch("https://recipe-book-server-ivory.vercel.app/");
+
+          const response = await fetch("https://recipe-book-server-pp1ex6eip-atikur-rahamans-projects-7616adbe.vercel.app/allRecipes");
           if (!response.ok) throw new Error("Failed to load data");
           return response.json();
         },
